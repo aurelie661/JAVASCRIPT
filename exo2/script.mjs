@@ -17,7 +17,7 @@ userForm.addEventListener("submit", function (e) {
 
   updateUserList();
   userCount.textContent = users.length;
-  console.log("Listing des Utilisateurs:", users);
+//   console.log("Listing des Utilisateurs:", users);
 
   userForm.reset();
 });
