@@ -1,18 +1,18 @@
 import Person from "./Person.js";
 
-const userForm = document.querySelector("#userForm");
-const userCount = document.querySelector("#userCount");
-const userList = document.querySelector("#userList");
-const users = [];
+let userForm = document.querySelector("#userForm");
+let userCount = document.querySelector("#userCount");
+let userList = document.querySelector("#userList");
+let users = [];
 
 userForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  const firstName = document.querySelector("#firstName").value;
-  const lastName = document.querySelector("#lastName").value;
-  const email = document.querySelector("#email").value;
-  const password = document.querySelector("#password").value;
+  let firstName = document.querySelector("#firstName").value;
+  let lastName = document.querySelector("#lastName").value;
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("#password").value;
 
-  const person = new Person(firstName, lastName, email, password);
+  let person = new Person(firstName, lastName, email, password);
   users.push(person);
 
   updateUserList();
@@ -25,7 +25,7 @@ userForm.addEventListener("submit", function (e) {
 function updateUserList() {
   userList.innerHTML = "";
   users.forEach((person) => {
-    const listItem = document.createElement("li");
+    let listItem = document.createElement("li");
     listItem.textContent = `Prénom: ${person.firstName}, Nom: ${person.lastName}, Email: ${person.email}`;
     userList.appendChild(listItem);
   });
