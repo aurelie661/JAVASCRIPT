@@ -1,5 +1,4 @@
 let todoForm = document.querySelector("#todo-form");
-let todoList = document.querySelector("#todo-display");
 
 todoForm.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -19,7 +18,7 @@ function addTodoToList(todo) {
   const buttonElement = document.createElement("button");
 
   descSpanElement.textContent = todo.description;
-  dateSpanElement.textContent = todo.dueDate;
+  dateSpanElement.textContent = todo.deadline;
   buttonElement.textContent = "Complete";
   buttonElement.addEventListener("click", () => {
     if (confirm("Voulez-vous vraiment supprimer cette ToDo ?")) {
